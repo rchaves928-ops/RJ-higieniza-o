@@ -22,20 +22,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="img/Gemini_Generated_Image_onty49onty49onty.png" />
+  <link rel="stylesheet" href="style.css?v=20261003" />
+  <script src="script.js?v=20261003" defer></script>
 </head>
 
 <body>
   <!-- Top Bar -->
   <header class="header">
     <div class="container header__inner">
-     <a class="brand" href="#top" aria-label="Ir para o topo">
+     <a class="brand" href="#top" aria-label="RJ Higienização — início">
   <img class="brand__logo" src="img/Gemini_Generated_Image_onty49onty49onty.png" alt="RJ Higienização" />
   <span class="brand__name">RJ Higienização</span>
 </a>
 
 
-      <nav class="nav" aria-label="Navegação principal">
+      <nav id="navPrincipal" class="nav" aria-label="Navegação principal">
+        <a href="#antes-depois">Resultados</a>
         <a href="#servicos">Serviços</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#avaliacoes">Avaliações</a>
@@ -43,7 +46,7 @@
         <a class="btn btn--small" href="#contato">Orçamento</a>
       </nav>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navPrincipal">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -54,20 +57,17 @@
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
-          <p class="badge">Atendimento em domicílio • Prioridade: Madre de Deus e Candeias</p>
-          <h1>Higienização Profissional de Estofados e Ar-Condicionado na Região de Madre de Deus e Candeias</h1>
-          <p class="lead">
-            Limpeza técnica para <strong>sofás</strong>, <strong>colchões</strong>, <strong>cadeiras</strong>,
-            <strong>bancos de carro</strong> e <strong>ar-condicionado</strong>.
-            Processo seguro, equipamentos profissionais e orientação de secagem.
-          </p>
+          <p class="badge">Atendimento em domicílio • Madre de Deus e Candeias</p>
+          <h1>Higienização de estofados e ar-condicionado</h1>
+          <p class="lead">Limpeza técnica de sofás, colchões, cadeiras, bancos de carro e ar-condicionado, no seu endereço. Atendimento com prioridade em <strong>Madre de Deus e Candeias, BA.</strong></p>
+          <p class="hero__price"><strong>Serviços a partir de R$ 100,00</strong><span>Valor final sujeito a orçamento.</span></p>
 
           <div class="hero__cta">
             <a class="btn" target="_blank" rel="noopener"
               href="https://wa.me/5571996850901?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20com%20a%20RJ%20Higieniza%C3%A7%C3%A3o.%0A%0AServi%C3%A7o%3A%20(Sof%C3%A1%2FColch%C3%A3o%2FCadeiras%2FBanco%20de%20carro%2FAr-condicionado)%0ACidade%2FBairro%3A%20(Madre%20de%20Deus%2FCandeias%2FOutro)%0AQuantidade%2FMedidas%3A%20%0APrefer%C3%AAncia%20de%20dia%2Fhor%C3%A1rio%3A%20">
-              Solicitar orçamento no WhatsApp
+              Pedir orçamento no WhatsApp
             </a>
-            <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+            <a class="btn btn--ghost" href="#antes-depois">Ver resultados reais</a>
           </div>
 
           <div class="hero__meta">
@@ -82,25 +82,13 @@
           </div>
         </div>
 
-        <aside class="hero__card">
-          <h2 class="card__title">Atendimento rápido na sua região</h2>
-          <p class="card__text">
-            Para <strong>Madre de Deus</strong> e <strong>Candeias</strong>, priorizamos agenda e deslocamento.
-            Envie mensagem e informe <strong>cidade/bairro</strong> + <strong>serviço</strong>.
-          </p>
-
-          <div class="card__links">
-            <a class="link" target="_blank" rel="noopener"
-               href="https://g.page/r/CVfwBwZ5xwS8EBM/review">Ver e deixar avaliação no Google</a>
-            <a class="link" target="_blank" rel="noopener"
-               href="https://www.instagram.com/rjhigienizacao_/">Instagram</a>
-            <a class="link" target="_blank" rel="noopener"
-               href="https://www.facebook.com/profile.php?id=61585973817148">Facebook</a>
-          </div>
-
-          <div class="card__note">
-            <p><strong>Dica:</strong> para agilizar, envie foto do item e informe medidas/quantidade.</p>
-          </div>
+        <aside class="hero__card" aria-label="Resultado real de higienização">
+          <p class="hero__eyebrow">O cuidado aparece no resultado</p>
+          <button class="photo-open hero__photo" type="button" aria-label="Ampliar resultado antes e depois de higienização de sofá">
+            <img src="img/img/sofa1-antesEdepois.png" alt="Comparação antes e depois da higienização de um sofá pela RJ Higienização" width="1536" height="1532" fetchpriority="high" decoding="async" />
+          </button>
+          <p class="hero__caption">Serviço realizado pela RJ Higienização. Toque na foto para ampliar.</p>
+          <p class="hero__disclaimer">Resultados variam conforme o material e o estado do estofado.</p>
         </aside>
       </div>
     </section>
@@ -117,11 +105,71 @@
           <span class="strip__text">Atendimento objetivo e organizado</span>
         </div>
         <div class="strip__item">
-          <span class="strip__title">Prova social</span>
-          <span class="strip__text">Instagram, Facebook e avaliações no Google</span>
+          <span class="strip__title">Orçamento antes da execução</span>
+          <span class="strip__text">Valores e horários confirmados no contato</span>
         </div>
       </div>
     </section>
+
+  <!-- Antes e Depois -->
+<section class="section" id="antes-depois">
+  <div class="container">
+    <div class="section__head">
+      <h2>Antes e Depois</h2>
+      <p>Veja serviços realizados pela RJ Higienização. Toque nas fotos para ampliar.</p>
+    </div>
+
+    <div class="ba-grid">
+      <!-- Colchão -->
+      <article class="ba-card">
+        <div class="ba-title">
+          <h3>Colchão</h3>
+          <span class="ba-sub">Madre de Deus / Candeias (região)</span>
+        </div>
+
+        <div class="ba-photos">
+          <figure class="ba-photo">
+            <button class="photo-open" type="button" aria-label="Ampliar: Antes - colchão com manchas e sujeira"><img src="img/img/1000191889.jpg" alt="Antes - colchão com manchas e sujeira" loading="lazy" width="1152" height="1536" decoding="async" /></button>
+            <figcaption>Antes</figcaption>
+          </figure>
+
+          <figure class="ba-photo">
+            <button class="photo-open" type="button" aria-label="Ampliar: Depois - colchão higienizado"><img src="img/img/1000191934.jpg" alt="Depois - colchão higienizado" loading="lazy" width="1536" height="1152" decoding="async" /></button>
+            <figcaption>Depois</figcaption>
+          </figure>
+        </div>
+
+        <p class="ba-note">
+          *O resultado pode variar conforme tecido/material e tempo da mancha.
+        </p>
+      </article>
+
+      <!-- Sofá -->
+      <article class="ba-card">
+        <div class="ba-title">
+          <h3>Sofá</h3>
+          <span class="ba-sub">Atendimento em domicílio</span>
+        </div>
+
+        <div class="ba-photos">
+          <figure class="ba-photo">
+            <button class="photo-open" type="button" aria-label="Ampliar: Antes - sofá com sujeira e marcas, abaixo limpo"><img src="img/img/sofa1-antesEdepois.png" alt="Comparação antes e depois da higienização de sofá" loading="lazy" width="1536" height="1532" decoding="async" /></button>
+            <figcaption>Antes/Depois</figcaption>
+          </figure>
+
+          <figure class="ba-photo">
+            <button class="photo-open" type="button" aria-label="Ampliar: Depois - sofá higienizado"><img src="img/img/sofa2-antesEdepois.png" alt="Comparação antes e depois da higienização de outro sofá" loading="lazy" width="691" height="1536" decoding="async" /></button>
+            <figcaption>Antes/Depois</figcaption>
+          </figure>
+        </div>
+
+        <p class="ba-note">
+          Para orçamento rápido, envie foto + cidade/bairro + medidas/quantidade.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
     <!-- Serviços -->
     <section class="section" id="servicos">
@@ -241,15 +289,15 @@
     <section class="section" id="avaliacoes">
       <div class="container">
         <div class="section__head">
-          <h2>Provas sociais</h2>
-          <p>Confira nossos canais e avaliações.</p>
+          <h2>Avaliações de clientes</h2>
+          <p>Confira as avaliações no Google e acompanhe nossos serviços nas redes sociais.</p>
         </div>
 
         <div class="grid social">
           <a class="social__card" target="_blank" rel="noopener"
              href="https://g.page/r/CVfwBwZ5xwS8EBM/review">
             <h3>Google Avaliações</h3>
-            <p>Veja e deixe sua avaliação no Google Meu Negócio.</p>
+            <p>Confira o perfil e deixe sua avaliação no Google.</p>
             <span class="link">Abrir</span>
           </a>
 
@@ -314,6 +362,21 @@
           <div class="faq__a" hidden>
             <p>Priorizamos <strong>Madre de Deus</strong> e <strong>Candeias</strong>. Também atendemos Lauro de Freitas, Salvador e Santo Amaro, conforme disponibilidade de agenda.</p>
           </div>
+
+          <button class="faq__q" aria-expanded="false">
+            Quais formas de pagamento vocês aceitam?
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__a" hidden>
+            <p>Aceitamos dinheiro, Pix e cartões de crédito, débito e alimentação.</p>
+          </div>
+          <button class="faq__q" aria-expanded="false">
+            Como combinar o dia e o horário?
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__a" hidden>
+            <p>Os dias e horários disponíveis são confirmados durante o orçamento pelo WhatsApp ou Instagram, conforme a agenda.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -335,7 +398,7 @@
 
             <a class="btn" target="_blank" rel="noopener"
                href="https://wa.me/5571996850901?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20com%20a%20RJ%20Higieniza%C3%A7%C3%A3o.">
-              Solicitar orçamento no WhatsApp
+              Pedir orçamento no WhatsApp
             </a>
 
             <div class="contact__links">
@@ -349,16 +412,27 @@
           </div>
 
           <div class="contact__box contact__box--alt">
-            <h3>Área atendida</h3>
+            <h3>Atendimento e pagamento</h3>
             <p><strong>Prioridade:</strong> Madre de Deus e Candeias (BA)</p>
             <p><strong>Também atendemos:</strong> Lauro de Freitas, Salvador e Santo Amaro, conforme disponibilidade de agenda.</p>
             <p><strong>Localidade:</strong> Madre de Deus – BA, CEP 42600-000.</p>
             <p><strong>Serviços a partir de R$ 100,00.</strong> Valor final sujeito a orçamento.</p>
+            <p><strong>Pagamento:</strong> dinheiro, Pix e cartões de crédito, débito e alimentação.</p>
+            <p><strong>Agendamento:</strong> dias e horários confirmados no orçamento pelo WhatsApp ou Instagram.</p>
             <p class="muted">Para agilizar: informe cidade/bairro, serviço e quantidade/medidas.</p>
           </div>
         </div>
       </div>
     </section>
+
+
+
+    <!-- WhatsApp floating button -->
+    <a class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"
+       href="https://wa.me/5571996850901?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20com%20a%20RJ%20Higieniza%C3%A7%C3%A3o.%0A%0AServi%C3%A7o%3A%20%0ACidade%2FBairro%3A%20%0AQuantidade%2FMedidas%3A%20%0APrefer%C3%AAncia%20de%20dia%2Fhor%C3%A1rio%3A%20">
+      WhatsApp
+    </a>
+  </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -373,149 +447,84 @@
       </div>
     </footer>
 
-    <!-- WhatsApp floating button -->
-    <a class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"
-       href="https://wa.me/5571996850901?text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20com%20a%20RJ%20Higieniza%C3%A7%C3%A3o.%0A%0AServi%C3%A7o%3A%20%0ACidade%2FBairro%3A%20%0AQuantidade%2FMedidas%3A%20%0APrefer%C3%AAncia%20de%20dia%2Fhor%C3%A1rio%3A%20">
-      WhatsApp
-    </a>
-  </main>
-
-  <script src="script.js"></script>
 
   <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "RJ Higienização",
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Madre de Deus",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "BA",
-          "addressCountry": "BR"
-        }
-      },
-      {
-        "@type": "City",
-        "name": "Candeias",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "BA",
-          "addressCountry": "BR"
-        }
-      },
-      {
-        "@type": "City",
-        "name": "Salvador",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "BA",
-          "addressCountry": "BR"
-        }
-      },
-      {
-        "@type": "City",
-        "name": "Lauro de Freitas",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "BA",
-          "addressCountry": "BR"
-        }
-      },
-      {
-        "@type": "City",
-        "name": "Santo Amaro",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "BA",
-          "addressCountry": "BR"
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "RJ Higienização",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Madre de Deus",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "BA",
+        "addressCountry": "BR"
       }
-    ],
-    "telephone": "+5571996850901",
-    "sameAs": [
-      "https://www.instagram.com/rjhigienizacao_/",
-      "https://www.facebook.com/profile.php?id=61585973817148"
-    ],
-    "url": "https://rchaves928-ops.github.io/RJ-higieniza-o/",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Madre de Deus",
-      "addressRegion": "BA",
-      "addressCountry": "BR",
-      "postalCode": "42600-000"
     },
-    "@id": "https://rchaves928-ops.github.io/RJ-higieniza-o/#empresa",
-    "description": "Higienização de sofás, colchões, cadeiras, bancos de carro e ar-condicionado em domicílio. Prioridade em Madre de Deus e Candeias, BA.",
-    "priceRange": "A partir de R$ 100, sujeito a orçamento",
-    "logo": "https://rchaves928-ops.github.io/RJ-higieniza-o/img/Gemini_Generated_Image_onty49onty49onty.png",
-    "image": "https://rchaves928-ops.github.io/RJ-higieniza-o/img/Gemini_Generated_Image_onty49onty49onty.png"
-  }
+    {
+      "@type": "City",
+      "name": "Candeias",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "BA",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Salvador",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "BA",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Lauro de Freitas",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "BA",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Santo Amaro",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "BA",
+        "addressCountry": "BR"
+      }
+    }
+  ],
+  "telephone": "+5571996850901",
+  "sameAs": [
+    "https://www.instagram.com/rjhigienizacao_/",
+    "https://www.facebook.com/profile.php?id=61585973817148"
+  ],
+  "url": "https://rchaves928-ops.github.io/RJ-higieniza-o/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Madre de Deus",
+    "addressRegion": "BA",
+    "addressCountry": "BR",
+    "postalCode": "42600-000"
+  },
+  "@id": "https://rchaves928-ops.github.io/RJ-higieniza-o/#empresa",
+  "description": "Higienização de sofás, colchões, cadeiras, bancos de carro e ar-condicionado em domicílio. Prioridade em Madre de Deus e Candeias, BA.",
+  "priceRange": "A partir de R$ 100, sujeito a orçamento",
+  "logo": "https://rchaves928-ops.github.io/RJ-higieniza-o/img/Gemini_Generated_Image_onty49onty49onty.png",
+  "image": "https://rchaves928-ops.github.io/RJ-higieniza-o/img/Gemini_Generated_Image_onty49onty49onty.png",
+  "paymentAccepted": "Dinheiro, Pix, cartão de crédito, cartão de débito, cartão alimentação"
+}
   </script>
-  <!-- Antes e Depois -->
-<section class="section" id="antes-depois">
-  <div class="container">
-    <div class="section__head">
-      <h2>Antes e Depois</h2>
-      <p>Resultados reais de higienizações realizadas pela RJ Higienização.</p>
-    </div>
 
-    <div class="ba-grid">
-      <!-- Colchão -->
-      <article class="ba-card">
-        <div class="ba-title">
-          <h3>Colchão</h3>
-          <span class="ba-sub">Madre de Deus / Candeias (região)</span>
-        </div>
 
-        <div class="ba-photos">
-          <figure class="ba-photo">
-            <img src="img/img/1000191889.jpg" alt="Antes - colchão com manchas e sujeira" loading="lazy" class="js-lightbox" />
-            <figcaption>Antes</figcaption>
-          </figure>
-
-          <figure class="ba-photo">
-            <img src="img/img/1000191934.jpg" alt="Depois - colchão higienizado" loading="lazy" class="js-lightbox" />
-            <figcaption>Depois</figcaption>
-          </figure>
-        </div>
-
-        <p class="ba-note">
-          *O resultado pode variar conforme tecido/material e tempo da mancha.
-        </p>
-      </article>
-
-      <!-- Sofá -->
-      <article class="ba-card">
-        <div class="ba-title">
-          <h3>Sofá</h3>
-          <span class="ba-sub">Atendimento em domicílio</span>
-        </div>
-
-        <div class="ba-photos">
-          <figure class="ba-photo">
-            <img src="img/img/sofa1-antesEdepois.png" alt="Antes - sofá com sujeira e marcas, abaixo limpo" loading="lazy" class="js-lightbox" />
-            <figcaption>Antes/Depois</figcaption>
-          </figure>
-
-          <figure class="ba-photo">
-            <img src="img/img/sofa2-antesEdepois.png" alt="Depois - sofá higienizado" loading="lazy" class="js-lightbox" />
-            <figcaption>Antes/Depois</figcaption>
-          </figure>
-        </div>
-
-        <p class="ba-note">
-          Para orçamento rápido, envie foto + cidade/bairro + medidas/quantidade.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<div class="lightbox" id="lightbox" hidden>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada do serviço" hidden>
   <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">×</button>
   <img class="lightbox__img" id="lightboxImg" alt="" />
 </div>
@@ -523,4 +532,5 @@
 
 </body>
 </html>
+
 
